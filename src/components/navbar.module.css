@@ -1,0 +1,27 @@
+nav{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  margin: auto;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.leftContainer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brandLogo{
+  width: 60px;
+}
+
+.leftContainer h1{
+  font-family: sans-serif;
+  margin-left: 1rem;
+  text-transform: capitalize;
+  font-size: 2rem;
+}
+
