@@ -1,1 +1,14 @@
-// eslint-disable-file no-use-before-define
+import { configureStore } from '@reduxjs/toolkit';
+import { rocketsReducer } from './rockets/rockets';
+import { missionsReducer } from './missions/missions';
+import { dragonsReducer } from './dragons/dragons';
+
+const store = configureStore({
+  reducer: {
+    rockets: rocketsReducer,
+    missions: missionsReducer,
+    dragons: dragonsReducer,
+  },
+});
+
+export default store;
