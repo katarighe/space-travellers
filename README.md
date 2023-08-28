@@ -1,70 +1,173 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
+<!-- TABLE OF CONTENTS -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# 📗 Table of Contents
 
-## Available Scripts
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Setup](#setup)
+  - [Install](#install)
+  - [Run tests](#run-tests)
+  - [Usage](#usage)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [📝 License](#license)
 
-In the project directory, you can run:
+<!-- PROJECT DESCRIPTION -->
 
-### `npm start`
+# 📖 Space Travellers React Project <a name="about-project"></a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The **Space Travellers React App** is a single-page application that allows users to browse and purchase books. It is built using the React JavaScript library and features a navbar and footer that provide navigation throughout the app. Users can register and login to create and manage their accounts, and they can add and remove books from a shopping cart. A search bar allows users to find books by title, author, or genre. A list of books that are currently in stock is also available, and each book has a page where users can view more information, such as the book's description, reviews, and price. Finally, users can view their past orders on an order history page.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The project is built with React, JSX, CSS, and JavaScript. It is also deployed on Heroku, so you can try it out by visiting the live demo.
 
-### `npm test`
+The App is still under development, but it is a good example of how React can be used to build a dynamic and interactive web application. Some additional features that could be added to the app in the future include the ability to filter books by genre, price, or other criteria; the ability to add books to a wishlist; the ability to rate and review books; the ability to subscribe to email notifications about new books; the ability to purchase books in different currencies; and the ability to translate the app into different languages.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠 Built With <a name="built-with"></a>
+* React
+* JSX
+* CSS
+* Javascript ES6
+* Visual Studio Code
+* ESLint
+* Stylelint
 
-### `npm run build`
+<!-- Features -->
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Key Features <a name="key-features"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> The key features of this project include the following.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- **A navbar and footer that provide navigation throughout the app.**
+- **A register and login form for users to create and manage their accounts.**
+- **A shopping cart where users can add and remove books.**
+- **A search bar that allows users to find books by title, author, or genre.**
+- **A list of books that are currently in stock.**
+- **A page for each book where users can view more information, such as the book's description, reviews, and price.**
+- **An order history page where users can view their past orders.**
 
-### `npm run eject`
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<!-- LIVE DEMO -->
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🚀 Live Demo <a name="live-demo"></a>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Live Demo of the Project: https://brilliant-vacherin-c698ee.netlify.app/
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Learn More
+<!-- GETTING STARTED -->
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 💻 Getting Started <a name="getting-started"></a>
+Get ready to explore the cosmos with these steps:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Prerequisites <a name="prerequisites"></a>
 
-### Code Splitting
+Ensure you have:
+ - A Web Browser such as Microsoft Edge or Google Chrome 🌐
+ - Git 🐙
+ - A code editor such as Visual Studio Code 👨‍💻
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Setup <a name="setup"></a>
 
-### Analyzing the Bundle Size
+Use `git clone` to get your local copy of the project.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+git clone https://github.com/katarighe/space-travellers-react.git
+```
 
-### Making a Progressive Web App
+### Install <a name="install"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+ Run `npm install` to set up the required packages.
 
-### Advanced Configuration
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Run Tests <a name="run-tests"></a>
+To run tests run the following command in your terminal
+```
+ npm test
+```
 
-### Deployment
+### Usage <a name="usage"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+Launch the app with the following command
 
-### `npm run build` fails to minify
+```
+  npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Mohamed Aden Ighe**
+
+- GitHub: [@katarighe](https://github.com/katarighe)
+- Twitter: [@katarighe](https://twitter.com/katarighe)
+- LinkedIn: [@mighe](https://linkedin.com/in/mighe)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+> Here are some future features that could be added to the Space Travellers React app in the future.
+
+- **User authentication and authorization:** This would allow users to create accounts, sign in and out, and have their own personal bookshelves.
+- **Shopping cart:** This would allow users to add books to their cart and checkout.
+- **Payment processing:** This would allow users to pay for their purchases with a credit card or other payment method.
+- **Shipping and delivery:** This would allow users to track the status of their orders and have their books shipped to them.
+- **Reviews and ratings:** This would allow users to leave reviews and ratings of books they have read.
+- **Wishlist:** This would allow users to save books they are interested in buying for later.
+- **Personalization:** This would allow the app to be customized to each user's preferences, such as their favorite genres or authors.
+- **Social features:** This would allow users to connect with other users, share book recommendations, and discuss books.
+
+These are just a few ideas for future features that could be added to the Space Travellers React app. The specific features that are added will depend on the needs and wants of the users.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+Give a star⭐️ or a thumbs up 👍 if you like this project! You can visit my GitHub profile for more of my projects.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+- Project supervised by [Microverse](https//www.microverse.org/)
+- [Creative Commons 4.0 License](https://creativecommons.org/licenses/by-nc/4.0/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
