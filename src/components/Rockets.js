@@ -19,12 +19,12 @@ const Rockets = () => {
             <img
               src={rocket.flickr_images[0]}
               alt="rocket"
-              style={{ width: "250px", height: "200px" }}
+              style={{ width: '250px', height: '200px' }}
               className="p-0"
             />
           </div>
           <div>
-            <h2 style={{ fontSize: "1.5em" }}>{rocket.name}</h2>
+            <h2 style={{ fontSize: '1.5em' }}>{rocket.name}</h2>
             <p>{rocket.description}</p>
             <button type="button" className="btn btn-primary">
               Reserve Rocket
