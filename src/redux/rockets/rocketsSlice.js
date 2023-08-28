@@ -1,7 +1,7 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  rockets: {},
+  rockets: [],
   loading: false,
   error: null,
 };
@@ -9,19 +9,31 @@ const initialState = {
 const rocketsSlice = createSlice({
   name: 'rockets',
   initialState,
-  reducers: {
-    // This reducer will be called when the `rockets` action is dispatched
-    setRockets(state, action) {
-      state.rockets = action.payload;
-    },
-    // This reducer will be called when the `loading` action is dispatched
-    setLoading(state, action) {
-      state.loading = action.payload;
-    },
-    // This reducer will be called when the `error` action is dispatched
-    setError(state, action) {
-      state.error = action.payload;
-    },
+  reducers: {},
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchRockets.pending, (state) => {
+        state.loading = true;
+      })
+
+      .addCase(fetchRockets.fulfilled, (state, action) => {
+        state.loading = false;
+        const newRocket = [];
+        const getRockets = action.payload;
+        getRockets.forEach((rocket) => {
+          newRocket.push({
+            id: rocket.id,
+            name: rocket.name,
+            description: rocket.description,
+            image: rocket.flickr_images[0],
+          });
+        });
+        state.rockets = newRocket;
+      })
+
+      .addCase(fetchRockets.rejected, (state) => {
+        state.loading = false;
+      });
   },
 });
 
