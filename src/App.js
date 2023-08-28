@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route exact path="/" element={<Rockets />} />
-        <Route exact path="/dragons" element={<Dragons />} />
+        <Route exact path="/Dragons" element={<Dragons />} />
       </Routes>
     </>
   );
