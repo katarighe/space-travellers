@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  dragons: [],
+  missions: {},
   loading: false,
   error: null,
 };
@@ -9,31 +9,19 @@ const initialState = {
 const dragonsSlice = createSlice({
   name: 'dragons',
   initialState,
-  reducers: {},
-  extraReducers: (builder) => {
-    builder
-      .addCase(fetchDragons.pending, (state) => {
-        state.loading = true;
-      })
-
-      .addCase(fetchDragons.fulfilled, (state, action) => {
-        state.loading = false;
-        const newRocket = [];
-        const getDragons = action.payload;
-        getDragons.forEach((rocket) => {
-          newRocket.push({
-            id: rocket.id,
-            name: rocket.name,
-            description: rocket.description,
-            image: rocket.flickr_images[0],
-          });
-        });
-        state.dragons = newRocket;
-      })
-
-      .addCase(fetchDragons.rejected, (state) => {
-        state.loading = false;
-      });
+  reducers: {
+    // This reducer will be called when the `missions` action is dispatched
+    setMissions(state, action) {
+      state.missions = action.payload;
+    },
+    // This reducer will be called when the `loading` action is dispatched
+    setLoading(state, action) {
+      state.loading = action.payload;
+    },
+    // This reducer will be called when the `error` action is dispatched
+    setError(state, action) {
+      state.error = action.payload;
+    },
   },
 });
 
