@@ -1,5 +1,5 @@
-nav{
-  display:flex;
+nav {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   width: 90%;
@@ -9,17 +9,17 @@ nav{
   font-family: sans-serif;
 }
 
-.leftContainer{
+.leftContainer {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.brandLogo{
+.brandLogo {
   width: 60px;
 }
 
-.leftContainer h1{
+.leftContainer h1 {
   margin-left: 1rem;
   text-transform: capitalize;
   font-size: 2rem;
