@@ -1,28 +1,30 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
 const initialState = {
-  rockets: {},
-  loading: false,
+  rockets: [],
+  loading: true,
   error: null,
 };
 
-const rocketsSlice = createSlice({
-  name: 'rockets',
-  initialState,
-  reducers: {
-    // This reducer will be called when the `missions` action is dispatched
-    setRockets(state, action) {
-      state.rockets = action.payload;
-    },
-    // This reducer will be called when the `loading` action is dispatched
-    setLoading(state, action) {
-      state.loading = action.payload;
-    },
-    // This reducer will be called when the `error` action is dispatched
-    setError(state, action) {
-      state.error = action.payload;
-    },
-  },
+export const fetchRockets = createAsyncThunk('get/rockets', async () => {
+  const rockets = await axios.get('https://api.spacexdata.com/v3/rockets');
+  return rockets.data;
 });
 
-export default rocketsSlice.reducer;
+export const Rocket = createSlice({
+  name: 'Rockets',
+  initialState,
+  extraReducers(builder) {
+    builder.addCase(fetchRockets.fulfilled, (state, { payload }) => {
+      state.status = false;
+      const data = payload.map((rocket) => ({
+        rocket_id: rocket.id,
+        rocket_name: rocket.name,
+        rocket_description: rocket.description,
+        rocket_flickr_images: rocket.flickr_images[0],
+      }));
+      state.rockets = data;
+    });
+  },
+});
