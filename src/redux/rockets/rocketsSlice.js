@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  missions: {},
+  rockets: {},
   loading: false,
   error: null,
 };
@@ -11,8 +11,8 @@ const rocketsSlice = createSlice({
   initialState,
   reducers: {
     // This reducer will be called when the `missions` action is dispatched
-    setMissions(state, action) {
-      state.missions = action.payload;
+    setRockets(state, action) {
+      state.rockets = action.payload;
     },
     // This reducer will be called when the `loading` action is dispatched
     setLoading(state, action) {

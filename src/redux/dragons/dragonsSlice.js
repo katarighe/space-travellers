@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  missions: {},
+  dragons: {},
   loading: false,
   error: null,
 };
@@ -11,8 +11,8 @@ const dragonsSlice = createSlice({
   initialState,
   reducers: {
     // This reducer will be called when the `missions` action is dispatched
-    setMissions(state, action) {
-      state.missions = action.payload;
+    setDragons(state, action) {
+      state.dragons = action.payload;
     },
     // This reducer will be called when the `loading` action is dispatched
     setLoading(state, action) {
