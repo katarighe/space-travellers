@@ -14,7 +14,16 @@ export const getDragons = createAsyncThunk('dragons/getDragons', async () => {
 const dragonsSlice = createSlice({
   name: 'dragons',
   initialState,
-  reducers: {},
+  reducers: {
+    reserveDragon: (state, action) => {
+      const id = action.payload;
+      const newState = state.dragons.map((dragon) => {
+        if (dragon.id !== id) return dragon;
+        return { ...dragon, reserved: true };
+      });
+      state.dragons = newState;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(getDragons.pending, (state) => {
@@ -32,5 +41,5 @@ const dragonsSlice = createSlice({
   },
 
 });
-
+export const { reserveDragon } = dragonsSlice.actions;
 export default dragonsSlice.reducer;
