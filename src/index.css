@@ -1,11 +1,9 @@
-nav ul {
-  list-style: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.nav-link a {
-  text-decoration: none;
-}
-
-.nav-link a.active {
-  text-decoration: underline;
+:root {
+  --primary-color: rgb(0, 89, 255);
 }
