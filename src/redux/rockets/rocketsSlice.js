@@ -3,29 +3,35 @@ import axios from 'axios';
 
 const initialState = {
   rockets: [],
-  loading: true,
+  loading: false,
   error: null,
 };
 
 export const fetchRockets = createAsyncThunk('get/rockets', async () => {
   const rockets = await axios.get('https://api.spacexdata.com/v3/rockets');
-  return rockets.data;
+  const data = await rockets.json();
+  return data;
 });
 
 export const Rocket = createSlice({
   name: 'Rockets',
   initialState,
+  reducers: {},
   extraReducers(builder) {
-    builder.addCase(fetchRockets.fulfilled, (state, { payload }) => {
-      state.status = false;
-      const data = payload.map((rocket) => ({
-        rocket_id: rocket.id,
-        rocket_name: rocket.name,
-        rocket_description: rocket.description,
-        rocket_flickr_images: rocket.flickr_images[0],
-      }));
-      state.rockets = data;
-    });
+    builder
+      .addCase(fetchRockets.pending, (state) => {
+        state.loading = true;
+        state.error = null;
+      })
+      .addCase(fetchRockets.fulfilled, (state, action) => {
+        state.loading = false;
+        state.rockets = action.payload;
+        state.error = null;
+      })
+      .addCase(fetchRockets.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      });
   },
 });
 
