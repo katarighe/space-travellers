@@ -1,0 +1,41 @@
+.dragon-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 5px 0;
+  padding: 2%;
+  padding-left: 10%;
+}
+
+.dragon-id {
+  display: flex;
+  gap: 13px;
+}
+
+.dragon-img {
+  width: 250px;
+  height: 200px;
+}
+
+.d-name-type {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.dragon-button {
+  padding: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+}
+
+.dragon-name {
+  color: #4d5053;
+  font-size: 1.2rem;
+}
+
+.dragon-type {
+  color: #4d5053;
+}
