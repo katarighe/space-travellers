@@ -46,6 +46,15 @@
   cursor: pointer;
 }
 
+.reserve_rocket_btn {
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  font-size: 1rem;
+}
+
 .rocket_btn:hover {
   background-color: #094c94;
   color: #000;
