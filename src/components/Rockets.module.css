@@ -42,11 +42,24 @@
   color: #fff;
   border-radius: 3px;
   transition: 0.5s;
-  font-size: 14px;
+  font-size: 1rem;
   cursor: pointer;
 }
 
 .reserve_rocket_btn:hover {
   background-color: #094c94;
   color: #000;
+}
+
+.cancel_reserve_rocket_btn {
+  width: 10vw;
+  height: 5vh;
+  background-color: #fff;
+  border: 1px solid #cdd0d2;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.5s;
+  color: #373737;
+  font-size: 1rem;
+  cursor: pointer;
 }
