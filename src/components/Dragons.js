@@ -1,36 +1,37 @@
-// import React, { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import fetchDragons from '../redux/dragons/dragonsSlice';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { getDragons } from '../redux/dragons/dragonsSlice';
+import '../dragon.css';
 
-// const dispatch = useDispatch();
+const Dragons = () => {
+  const dispatch = useDispatch();
 
-// useEffect(() => {
-//   dispatch(fetchDragons());
-// }, [dispatch]);
+  useEffect(() => {
+    dispatch(getDragons());
+  }, [dispatch]);
 
-// const allDragons = useSelector((state) => state.dragons);
-const Dragons = () => (
-  <ul className="container">
-    Dragons
-    {/* {allDragons.map((dragon) => (
-        <li key={dragon.id} className="dragon_id">
-          <div className="dragon">
-            <img
-              src={dragon.flickr_images[0]}
-              alt="dragon"
-              style={{ width: '250px', height: '200px' }}
-              className="p-0"
-            />
+  const { loading, error, dragons } = useSelector((state) => state.dragons);
+
+  return (
+    <section className="dragon-container">
+      {loading && <p>Dragons loading, please wait!</p>}
+      {error && <p>Error loading dragons, please try again!</p>}
+      {dragons.map((dragon) => (
+        <div key={dragon.id} className="dragon-id">
+          <div className="dragon-info">
+            <img src={dragon.flickr_images[0]} alt="dragon" className="dragon-img" />
           </div>
-          <div>
-            <h2 style={{ fontSize: '1.5em' }}>{dragon.name}</h2>
-            <p>{dragon.description}</p>
-            <button type="button" className="btn btn-primary">
+          <div className="d-name-type">
+            <h2 className="dragon-name">{dragon.name}</h2>
+            <p className="dragon-type">{dragon.type}</p>
+            <button type="button" className="dragon-button">
               Reserve Dragon
             </button>
           </div>
-        </li>
-      ))} */}
-  </ul>
-);
+        </div>
+      ))}
+    </section>
+  );
+};
+
 export default Dragons;
