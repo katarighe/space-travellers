@@ -1,1 +1,3 @@
-// eslint-disable-file no-use-before-define
+const Missions = () => 'missions';
+
+export default Missions;
