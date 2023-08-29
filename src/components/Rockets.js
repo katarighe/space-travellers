@@ -1,19 +1,18 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import fetchRockets from '../redux/rockets/rocketsSlice';
+// import React, { useEffect } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import fetchRockets from '../redux/rockets/rocketsSlice';
 
-const Rockets = () => {
-  const dispatch = useDispatch();
+// const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
+// useEffect(() => {
+//   dispatch(fetchRockets());
+// }, [dispatch]);
 
-  const allRockets = useSelector((state) => state.rockets);
-
-  return (
-    <ul className="container">
-      {allRockets.map((rocket) => (
+// const allRockets = useSelector((state) => state.rockets);
+const Rockets = () => (
+  <ul className="container">
+    rockets
+    {/* {allRockets.map((rocket) => (
         <li key={rocket.id} className="rocket_id">
           <div className="rocket">
             <img
@@ -31,9 +30,7 @@ const Rockets = () => {
             </button>
           </div>
         </li>
-      ))}
-    </ul>
-  );
-};
-
+      ))} */}
+  </ul>
+);
 export default Rockets;

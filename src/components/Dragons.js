@@ -1,19 +1,18 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import fetchDragons from '../redux/dragons/dragonsSlice';
+// import React, { useEffect } from 'react';
+// import { useDispatch, useSelector } from 'react-redux';
+// import fetchDragons from '../redux/dragons/dragonsSlice';
 
-const Dragons = () => {
-  const dispatch = useDispatch();
+// const dispatch = useDispatch();
 
-  useEffect(() => {
-    dispatch(fetchDragons());
-  }, [dispatch]);
+// useEffect(() => {
+//   dispatch(fetchDragons());
+// }, [dispatch]);
 
-  const allDragons = useSelector((state) => state.dragons);
-
-  return (
-    <ul className="container">
-      {allDragons.map((dragon) => (
+// const allDragons = useSelector((state) => state.dragons);
+const Dragons = () => (
+  <ul className="container">
+    Dragons
+    {/* {allDragons.map((dragon) => (
         <li key={dragon.id} className="dragon_id">
           <div className="dragon">
             <img
@@ -31,9 +30,7 @@ const Dragons = () => {
             </button>
           </div>
         </li>
-      ))}
-    </ul>
-  );
-};
-
+      ))} */}
+  </ul>
+);
 export default Dragons;
