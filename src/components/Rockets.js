@@ -1,36 +1,44 @@
-// import React, { useEffect } from 'react';
-// import { useDispatch, useSelector } from 'react-redux';
-// import fetchRockets from '../redux/rockets/rocketsSlice';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchRockets } from '../redux/rockets/rocketsSlice';
+import styles from './Rockets.module.css';
 
-// const dispatch = useDispatch();
+const Rockets = () => {
+  const { rockets, status, error } = useSelector((state) => state.rockets);
+  const dispatch = useDispatch();
 
-// useEffect(() => {
-//   dispatch(fetchRockets());
-// }, [dispatch]);
+  useEffect(() => {
+    dispatch(fetchRockets());
+  }, [dispatch]);
 
-// const allRockets = useSelector((state) => state.rockets);
-const Rockets = () => (
-  <ul className="container">
-    rockets
-    {/* {allRockets.map((rocket) => (
-        <li key={rocket.id} className="rocket_id">
-          <div className="rocket">
-            <img
-              src={rocket.flickr_images[0]}
-              alt="rocket"
-              style={{ width: '250px', height: '200px' }}
-              className="p-0"
-            />
+  if (status) {
+    return <div className="loading">Loading, please wait....</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="error">Error loading rocket list, please try again!</div>
+    );
+  }
+
+  return (
+    <div className={styles.rocket_container}>
+      {rockets.map((rocket) => (
+        <section className={styles.space} key={rocket.rocket_id}>
+          <div className={styles.img}>
+            <img src={rocket.flickr_images[0]} alt="" />
           </div>
-          <div>
-            <h2 style={{ fontSize: '1.5em' }}>{rocket.name}</h2>
+          <div className={styles.details}>
+            <h2>{rocket.rocket_name}</h2>
             <p>{rocket.description}</p>
-            <button type="button" className="btn btn-primary">
+            <button className={styles.rocket_btn} type="button">
               Reserve Rocket
             </button>
           </div>
-        </li>
-      ))} */}
-  </ul>
-);
+        </section>
+      ))}
+    </div>
+  );
+};
+
 export default Rockets;
