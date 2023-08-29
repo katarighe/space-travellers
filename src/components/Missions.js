@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions } from '../redux/missions/missionsSlice';
+import { fetchMissions, joinMission } from '../redux/missions/missionsSlice';
 import styles from './missions.module.css';
 
 const Missions = () => {
@@ -13,6 +13,10 @@ const Missions = () => {
     dispatch(fetchMissions());
   }, [dispatch]);
 
+  const handleJoinMission = (missionId) => {
+    dispatch(joinMission(missionId));
+  };
+
   return (
     <div className={styles.missionsContainer}>
       {loading ? <p>Loading...</p> : null}
@@ -24,25 +28,29 @@ const Missions = () => {
       ) : null}
       <table className={styles.table}>
         <thead>
-          <th colSpan={1} className={styles.cell}>Mission</th>
-          <th colSpan={1} className={styles.cell}>Discription</th>
-          <th colSpan={1} className={styles.cell}>Status</th>
-          <th colSpan={1} className={styles.cell}>...</th>
+          <th className={styles.cell}>Mission</th>
+          <th className={styles.cell}>Discription</th>
+          <th className={styles.cell}>Status</th>
+          <th className={styles.cell}>...</th>
         </thead>
         <tbody />
         {missions.map((mission, index) => (
           <tr key={mission.mission_id} className={index % 2 === 0 ? styles.bgDark : null}>
-            <td className={styles.cell}>{mission.mission_name}</td>
+            <td className={`${styles.cell} ${styles.mission}`}>{mission.mission_name}</td>
             <td className={styles.cell}>{mission.description}</td>
             <td className={styles.cell}>
-              <span className={styles.status}>not a member</span>
+              <button className={mission.status === 'joined' ? styles.active : styles.status} type="button">
+                {mission.status === 'joined' ? 'active member' : 'not a member'}
+              </button>
             </td>
             <td className={styles.cell}>
-              <span className={`${styles.statusBtn} ${styles.statusBtnJoin}`}>
-                join
-                {' '}
-                mission
-              </span>
+              <button
+                className={`${styles.statusBtn} ${styles.statusBtnJoin} ${mission.statusBtn === 'leave mission' ? styles.statusBtnLeave : null}`}
+                onClick={() => handleJoinMission(mission.mission_id)}
+                type="button"
+              >
+                {mission.statusBtn || 'join mission'}
+              </button>
             </td>
           </tr>
         ))}
