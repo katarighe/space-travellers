@@ -1,10 +1,11 @@
 .rocket_container {
-  border-top: 1px solid black;
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 50px;
   margin: 5px 0;
-  padding-top: 20px;
+  padding-top: 40px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .space {
@@ -23,9 +24,9 @@
 }
 
 .details {
-  flex: 4;
   display: flex;
   flex-direction: column;
+  flex: 4;
   gap: 10px;
 }
 
