@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets, reserveRocket } from '../redux/rockets/rocketsSlice';
+import { fetchRockets, cancelReservation, reserveRocket } from '../redux/rockets/rocketsSlice';
 import styles from './Rockets.module.css';
 
 const Rockets = () => {
@@ -31,6 +31,15 @@ const Rockets = () => {
           <div className={styles.details}>
             <h2>{rocket.rocket_name}</h2>
             <p>{rocket.description}</p>
+            {rocket.reserved && (
+              <button
+                type="button"
+                className={styles.cancel_reserve_rocket_btn}
+                onClick={() => dispatch(cancelReservation(rocket.id))}
+              >
+                Cancel Reservation
+              </button>
+            )}
             {!rocket.reserved && (
               <button
                 type="button"
