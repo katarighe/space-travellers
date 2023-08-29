@@ -28,3 +28,5 @@ export const Rocket = createSlice({
     });
   },
 });
+
+export default Rocket.reducer;
