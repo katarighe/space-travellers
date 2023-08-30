@@ -32,7 +32,7 @@
 
 .headline_h2 {
   color: #4d5053;
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 600;
   font-family: monospace;
 }
@@ -41,6 +41,7 @@
   color: #4d5053;
   padding-right: 5px;
   font-family: monospace;
+  font-size: 1.25rem;
 }
 
 .reserved {
@@ -81,5 +82,6 @@
   transition: 0.5s;
   color: #373737;
   font-size: 1rem;
+  font-family: monospace;
   cursor: pointer;
 }
