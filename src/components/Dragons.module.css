@@ -25,37 +25,55 @@
 }
 
 .dragon_button {
-  padding: 5px;
-  border: none;
+  width: 10vw;
+  height: 5vh;
   background-color: #007bff;
+  border: none;
+  color: #fff;
   border-radius: 3px;
-  color: white;
+  transition: 0.5s;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.dragon_button:hover {
+  background-color: #094c94;
+  color: #000;
 }
 
 .dragon_cancel {
-  padding: 5px;
-  border: 1px solid #4d5053;
-  background-color: white;
-  border-radius: 3px;
-  color: #9da2a8;
+  width: 10vw;
+  height: 5vh;
+  background-color: #fff;
+  border: 1px solid #cdd0d2;
+  border-radius: 5px;
+  padding: 10px;
+  transition: 0.5s;
+  color: #373737;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .dragon_reserved {
   padding: 3px;
   border: none;
-  background-color: #007bff;
+  background-color: #68c1d0;
   border-radius: 3px;
-  color: white;
+  color: #fff;
   margin-right: 3px;
 }
 
 .dragon_name {
   color: #4d5053;
-  font-size: 1.2rem;
+  font-size: 1.75rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .dragon_type {
   color: #4d5053;
+  padding-right: 5px;
+  font-size: 1.25em;
 }
 
 .dragon_list {
