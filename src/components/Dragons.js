@@ -23,12 +23,13 @@ const Dragons = () => {
           </div>
           <div className={styles.d_name_type}>
             <h2 className={styles.dragon_name}>{dragon.name}</h2>
-            <p className={styles.dragon_type}>{dragon.type}</p>
-            {!dragon.reserved ? (
-              <button type="button" className={styles.dragon_button} onClick={() => dispatch(reserveDragon(dragon.id))}>
-                Reserve Dragon
-              </button>
-            ) : null}
+            <p className={styles.dragon_type}>
+              {dragon.reserved && <button type="button" className={styles.dragon_reserved}>Reserved</button>}
+              {dragon.type}
+            </p>
+            <button type="button" className={dragon.reserved ? styles.dragon_cancel : styles.dragon_button} onClick={() => dispatch(reserveDragon(dragon.id))}>
+              {dragon.reserved ? 'Cancel Reservation' : 'Reserve Dragon'}
+            </button>
           </div>
         </div>
       ))}
