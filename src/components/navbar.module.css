@@ -38,8 +38,3 @@ nav {
   color: var(--primary-color);
   letter-spacing: 1px;
 }
-
-.active {
-  border-bottom: 1px solid var(--primary-color);
-  padding-bottom: 3px;
-}
