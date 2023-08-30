@@ -1,0 +1,22 @@
+.profileContainer {
+  width: 85%;
+  margin: 1rem auto;
+  font-family: monospace;
+}
+
+.header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.missionItems {
+  list-style-type: none;
+}
+
+.missionItem {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
