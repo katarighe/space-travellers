@@ -1,0 +1,42 @@
+.profile_page {
+  padding: 2rem 5%;
+  display: flex;
+  gap: 5%;
+  flex: 2;
+}
+
+.my_profile {
+  flex: 2;
+}
+
+.my_profile * {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.my_profile h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.4px;
+}
+
+.my_profile ul {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.my_profile ul li {
+  padding: 0.5rem 1rem 1.6rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.my_profile ul li:last-child {
+  border-bottom: none;
+}
+
+.my_rockets {
+  background-color: #7fffd4;
+  flex: 2;
+}
