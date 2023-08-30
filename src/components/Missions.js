@@ -33,7 +33,7 @@ const Missions = () => {
       <table className={styles.table}>
         <thead>
           <th className={styles.cell}>Mission</th>
-          <th className={styles.cell}>Discription</th>
+          <th className={styles.cell}>Description</th>
           <th className={styles.cell}>Status</th>
           <th className={styles.cell}>...</th>
         </thead>
