@@ -18,7 +18,11 @@ const missionsSlice = createSlice({
   reducers: {
     joinMission: (state, action) => {
       const missionId = action.payload;
-      state.missions = state.missions.map((mission) => (mission.mission_id === missionId ? { ...mission, status: 'joined', statusBtn: 'leave mission' } : mission));
+      state.missions = state.missions.map((mission) => (mission.mission_id === missionId ? {
+        ...mission,
+        status: mission.status === 'active member' ? 'not a member' : 'active member',
+        statusBtn: mission.status === 'active member' ? 'join mission' : 'leave mission',
+      } : mission));
     },
   },
   extraReducers: (builder) => {

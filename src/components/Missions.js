@@ -39,8 +39,8 @@ const Missions = () => {
             <td className={`${styles.cell} ${styles.mission}`}>{mission.mission_name}</td>
             <td className={styles.cell}>{mission.description}</td>
             <td className={styles.cell}>
-              <button className={mission.status === 'joined' ? styles.active : styles.status} type="button">
-                {mission.status === 'joined' ? 'active member' : 'not a member'}
+              <button className={mission.status === 'active member' ? styles.active : styles.status} type="button">
+                {mission.status === 'active member' ? 'active member' : 'not a member'}
               </button>
             </td>
             <td className={styles.cell}>
