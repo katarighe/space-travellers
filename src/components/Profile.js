@@ -19,7 +19,7 @@ const Profile = () => {
           ))}
         </ul>
       </section>
-  <DragonList />
+      <DragonList />
     </div>
   );
 };
