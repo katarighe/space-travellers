@@ -10,9 +10,9 @@ const Profile = () => {
         <div className={styles.my_missions}>
           <h2>My Rockets</h2>
           <ul>
-            {rockets.filter((rocket) => rocket.reserved === true)
+            {rockets.filter((rocket) => rocket.reserved)
               .map((rocket) => (
-                <li key={rocket.id}>{rocket.name}</li>
+                <li key={rocket.rocket_id}>{rocket.rocket_name}</li>
               ))}
           </ul>
         </div>
