@@ -5,21 +5,21 @@
   flex: 2;
 }
 
-.my_profile {
+.my_missions {
   flex: 2;
 }
 
-.my_profile * {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+.my_missions * {
+  font-family: 'Roboto', sans-serif;
 }
 
-.my_profile h2 {
+.my_missions h2 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
   letter-spacing: 0.4px;
 }
 
-.my_profile ul {
+.my_missions ul {
   list-style-type: none;
   padding: 0;
   border: 1px solid #ddd;
@@ -27,16 +27,11 @@
   width: 100%;
 }
 
-.my_profile ul li {
+.my_missions ul li {
   padding: 0.5rem 1rem 1.6rem;
   border-bottom: 1px solid #ddd;
 }
 
-.my_profile ul li:last-child {
+.my_missions ul li:last-child {
   border-bottom: none;
-}
-
-.my_rockets {
-  background-color: #7fffd4;
-  flex: 2;
 }
