@@ -30,6 +30,11 @@ const Rockets = () => {
           </div>
           <div className={styles.details}>
             <h2>{rocket.rocket_name}</h2>
+            {rocket.reserved ? (
+              <span className={styles.reserved}>Reserved</span>
+            ) : (
+              ''
+            )}
             <p>{rocket.description}</p>
             {rocket.reserved && (
               <button
