@@ -1,15 +1,15 @@
-.profileContainer{
+.profileContainer {
   width: 85%;
   margin: 1rem auto;
   font-family: monospace;
 }
 
-.header{
+.header {
   font-size: 2rem;
   margin-bottom: 1rem;
 }
 
-.missionItems{
+.missionItems {
   list-style-type: none;
 }
 
