@@ -1,5 +1,5 @@
 import { useSelector } from 'react-redux';
-import styles from './missionsprofile.module.css';
+import styles from './MissionsProfile.module.css';
 
 const MissionsProfile = () => {
   const missions = useSelector((state) => state.missions.missions);
