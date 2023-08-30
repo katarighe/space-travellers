@@ -28,7 +28,25 @@
   padding: 5px;
   border: none;
   background-color: #007bff;
+  border-radius: 3px;
   color: white;
+}
+
+.dragon_cancel {
+  padding: 5px;
+  border: 1px solid #4d5053;
+  background-color: white;
+  border-radius: 3px;
+  color: #9DA2A8;
+}
+
+.dragon_reserved {
+  padding: 3px;
+  border: none;
+  background-color: #007bff;
+  border-radius: 3px;
+  color: white;
+  margin-right: 3px;
 }
 
 .dragon_name {
