@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getDragons } from '../redux/dragons/dragonsSlice';
+import { getDragons, reserveDragon } from '../redux/dragons/dragonsSlice';
 import styles from './Dragons.module.css';
 
 const Dragons = () => {
@@ -24,9 +24,11 @@ const Dragons = () => {
           <div className={styles.d_name_type}>
             <h2 className={styles.dragon_name}>{dragon.name}</h2>
             <p className={styles.dragon_type}>{dragon.type}</p>
-            <button type="button" className={styles.dragon_button}>
-              Reserve Dragon
-            </button>
+            {!dragon.reserved ? (
+              <button type="button" className={styles.dragon_button} onClick={() => dispatch(reserveDragon(dragon.id))}>
+                Reserve Dragon
+              </button>
+            ) : null}
           </div>
         </div>
       ))}
