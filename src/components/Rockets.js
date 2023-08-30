@@ -32,6 +32,7 @@ const Rockets = () => {
             <h2>{rocket.rocket_name}</h2>
             <p>{rocket.description}</p>
             {rocket.reserved && (
+              // render Cancel Rocket button
               <button
                 type="button"
                 className={styles.cancel_reserve_rocket_btn}
@@ -41,6 +42,7 @@ const Rockets = () => {
               </button>
             )}
             {!rocket.reserved && (
+              // render Reserve Rocket button
               <button
                 type="button"
                 className={styles.reserve_rocket_btn}
