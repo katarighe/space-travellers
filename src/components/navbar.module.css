@@ -23,6 +23,7 @@ nav {
   margin-left: 1rem;
   text-transform: capitalize;
   font-size: 2rem;
+  font-family: monospace;
 }
 
 .links {
@@ -30,6 +31,8 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: monospace;
+  font-size: 1.1rem;
 }
 
 .link {
