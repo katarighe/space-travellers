@@ -2,7 +2,7 @@ import { useSelector } from 'react-redux';
 import styles from './Profile.module.css';
 
 const Profile = () => {
-  const { rockets } = useSelector((store) => store.rockets);
+  const { rockets } = useSelector((state) => state.rockets);
 
   return (
     <div className={styles.profile_page}>
