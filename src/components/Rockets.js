@@ -29,7 +29,7 @@ const Rockets = () => {
             <img src={rocket.flickr_images[0]} alt="" />
           </div>
           <div className={styles.details}>
-            <h2>{rocket.rocket_name}</h2>
+            <div className={styles.headline_h2}>{rocket.rocket_name}</div>
             {rocket.reserved ? (
               <span className={styles.reserved}>Reserved</span>
             ) : (

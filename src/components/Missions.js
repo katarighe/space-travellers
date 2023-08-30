@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchMissions, joinMission, leaveMission } from '../redux/missions/missionsSlice';
-import styles from './missions.module.css';
+import styles from './Missions.module.css';
 
 const Missions = () => {
   const dispatch = useDispatch();
@@ -33,7 +33,7 @@ const Missions = () => {
       <table className={styles.table}>
         <thead>
           <th className={styles.cell}>Mission</th>
-          <th className={styles.cell}>Discription</th>
+          <th className={styles.cell}>Description</th>
           <th className={styles.cell}>Status</th>
           <th className={styles.cell}>...</th>
         </thead>

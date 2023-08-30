@@ -30,8 +30,18 @@
   gap: 10px;
 }
 
+.headline_h2 {
+  color: #4d5053;
+  font-size: 2em;
+  font-weight: 600;
+  font-family: monospace;
+}
+
 .details p {
+  color: #4d5053;
   padding-right: 5px;
+  font-family: monospace;
+  font-size: 1.25rem;
 }
 
 .reserved {
@@ -41,6 +51,7 @@
   border-radius: 5px;
   padding: 4px;
   font-size: 1rem;
+  font-family: monospace;
 }
 
 .reserve_rocket_btn {
@@ -52,6 +63,7 @@
   border-radius: 3px;
   transition: 0.5s;
   font-size: 1rem;
+  font-family: monospace;
   cursor: pointer;
 }
 
@@ -70,5 +82,6 @@
   transition: 0.5s;
   color: #373737;
   font-size: 1rem;
+  font-family: monospace;
   cursor: pointer;
 }

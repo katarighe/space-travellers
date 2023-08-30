@@ -31,6 +31,7 @@
   text-transform: uppercase;
   font-size: 0.7rem;
   padding: 0.5rem;
+  font-family: monospace;
 }
 
 .active {
@@ -42,6 +43,7 @@
   text-transform: uppercase;
   font-size: 0.7rem;
   padding: 0.5rem;
+  font-family: monospace;
 }
 
 .statusBtn {
@@ -51,6 +53,7 @@
   text-transform: capitalize;
   cursor: pointer;
   border-radius: 5px;
+  font-family: monospace;
 }
 
 .statusBtnJoin {
@@ -61,6 +64,7 @@
   text-transform: uppercase;
   font-size: 0.7rem;
   padding: 0.5rem;
+  font-family: monospace;
 }
 
 .statusBtnLeave {
@@ -71,4 +75,5 @@
   text-transform: uppercase;
   font-size: 0.7rem;
   padding: 0.5rem;
+  font-family: monospace;
 }
