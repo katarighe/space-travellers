@@ -33,6 +33,7 @@
   border-radius: 3px;
   transition: 0.5s;
   font-size: 1rem;
+  font-family: monospace;
   cursor: pointer;
 }
 
@@ -51,6 +52,7 @@
   transition: 0.5s;
   color: #373737;
   font-size: 1rem;
+  font-family: monospace;
   cursor: pointer;
 }
 
@@ -61,6 +63,7 @@
   border-radius: 3px;
   color: #fff;
   margin-right: 3px;
+  font-family: monospace;
 }
 
 .dragon_name {
@@ -68,18 +71,21 @@
   font-size: 1.75rem;
   display: flex;
   flex-direction: column;
+  font-family: monospace;
 }
 
 .dragon_type {
   color: #4d5053;
   padding-right: 5px;
   font-size: 1.25em;
+  font-family: monospace;
 }
 
 .dragon_list {
   padding: 2%;
   border-bottom: 1px solid #ccc;
   list-style: none;
+  font-family: monospace;
 }
 
 .dragon_list_container {
