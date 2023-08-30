@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions, joinMission } from '../redux/missions/missionsSlice';
+import { fetchMissions, joinMission, leaveMission } from '../redux/missions/missionsSlice';
 import styles from './missions.module.css';
 
 const Missions = () => {
@@ -13,8 +13,12 @@ const Missions = () => {
     dispatch(fetchMissions());
   }, [dispatch]);
 
-  const handleJoinMission = (missionId) => {
-    dispatch(joinMission(missionId));
+  const handleToggleMission = (missionId, reserved) => {
+    if (reserved) {
+      dispatch(leaveMission(missionId));
+    } else {
+      dispatch(joinMission(missionId));
+    }
   };
 
   return (
@@ -39,17 +43,21 @@ const Missions = () => {
             <td className={`${styles.cell} ${styles.mission}`}>{mission.mission_name}</td>
             <td className={styles.cell}>{mission.description}</td>
             <td className={styles.cell}>
-              <button className={mission.status === 'joined' ? styles.active : styles.status} type="button">
-                {mission.status === 'joined' ? 'active member' : 'not a member'}
+              <button className={mission.reserved ? styles.active : styles.status} type="button">
+                {mission.reserved ? 'active member' : 'not a member'}
               </button>
             </td>
             <td className={styles.cell}>
               <button
-                className={`${styles.statusBtn} ${styles.statusBtnJoin} ${mission.statusBtn === 'leave mission' ? styles.statusBtnLeave : null}`}
-                onClick={() => handleJoinMission(mission.mission_id)}
+                className={`${styles.statusBtn} ${styles.statusBtnJoin}
+                ${mission.reserved ? styles.statusBtnLeave : null}`}
+                onClick={
+                () => handleToggleMission(mission.mission_id,
+                  mission.reserved)
+                }
                 type="button"
               >
-                {mission.statusBtn || 'join mission'}
+                {mission.reserved ? 'Leave mission' : 'join mission'}
               </button>
             </td>
           </tr>
