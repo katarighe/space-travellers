@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets, cancelReservation, reserveRocket } from '../redux/rockets/rocketsSlice';
+import { cancelReservation, reserveRocket } from '../redux/rockets/rocketsSlice';
 import styles from './Rockets.module.css';
 
 const Rockets = () => {
   const { rockets, status, error } = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
-
   if (status) {
     return <div className="loading">Loading, please wait...</div>;
   }
@@ -29,7 +23,7 @@ const Rockets = () => {
             <img src={rocket.flickr_images[0]} alt="" />
           </div>
           <div className={styles.details}>
-            <h2>{rocket.rocket_name}</h2>
+            <div className={styles.headline_h2}>{rocket.rocket_name}</div>
             {rocket.reserved ? (
               <span className={styles.reserved}>Reserved</span>
             ) : (

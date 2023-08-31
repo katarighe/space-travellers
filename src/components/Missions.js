@@ -1,17 +1,12 @@
-import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions, joinMission, leaveMission } from '../redux/missions/missionsSlice';
-import styles from './missions.module.css';
+import { joinMission, leaveMission } from '../redux/missions/missionsSlice';
+import styles from './Missions.module.css';
 
 const Missions = () => {
   const dispatch = useDispatch();
   const missions = useSelector((state) => state.missions.missions);
   const loading = useSelector((state) => state.missions.loading);
   const error = useSelector((state) => state.missions.error);
-
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
 
   const handleToggleMission = (missionId, reserved) => {
     if (reserved) {
@@ -33,7 +28,7 @@ const Missions = () => {
       <table className={styles.table}>
         <thead>
           <th className={styles.cell}>Mission</th>
-          <th className={styles.cell}>Discription</th>
+          <th className={styles.cell}>Description</th>
           <th className={styles.cell}>Status</th>
           <th className={styles.cell}>...</th>
         </thead>

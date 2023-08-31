@@ -1,0 +1,20 @@
+.dragonProfileContainer {
+  font-family: monospace;
+}
+
+.header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.dragonItems {
+  list-style-type: none;
+}
+
+.dragonItem {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
