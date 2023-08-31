@@ -1,13 +1,12 @@
-<<<<<<< HEAD:src/components/profile.module.css
 .profile_page {
   padding: 2rem 5%;
   display: flex;
   gap: 5%;
   flex: 2;
-=======
+}
+
 .profileContainer {
   font-family: monospace;
->>>>>>> e429a4ce3544bac1f2994f650745fe9d32e29f61:src/components/MissionsProfile.module.css
 }
 
 .my_missions {
