@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMissions, joinMission, leaveMission } from '../redux/missions/missionsSlice';
+import { joinMission, leaveMission } from '../redux/missions/missionsSlice';
 import styles from './Missions.module.css';
 
 const Missions = () => {
@@ -8,10 +7,6 @@ const Missions = () => {
   const missions = useSelector((state) => state.missions.missions);
   const loading = useSelector((state) => state.missions.loading);
   const error = useSelector((state) => state.missions.error);
-
-  useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
 
   const handleToggleMission = (missionId, reserved) => {
     if (reserved) {
