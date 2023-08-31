@@ -1,5 +1,6 @@
 <a name="readme-top"></a>
 <!-- TABLE OF CONTENTS -->
+Space Travelers' Hub is a single-page application that allows users to reserve rockets and dragons for missions. The missions are fetched from external APIs, and the selected services are displayed on the user's profile page.
 
 # 📗 Table of Contents
 
@@ -23,13 +24,11 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Space Travellers React Project <a name="about-project"></a>
+# 📖 Space Travellers' Hub <a name="about-project"></a>
 
-The **Space Travellers React App** is a single-page application that allows users to browse and purchase books. It is built using the React JavaScript library and features a navbar and footer that provide navigation throughout the app. Users can register and login to create and manage their accounts, and they can add and remove books from a shopping cart. A search bar allows users to find books by title, author, or genre. A list of books that are currently in stock is also available, and each book has a page where users can view more information, such as the book's description, reviews, and price. Finally, users can view their past orders on an order history page.
+**Space Travellers' Hub** is a single-page application (SPA) built with React that uses real-time data from the SpaceX API. Users can book rockets and join selected space missions, and the selected services are displayed on the user's profile page.
 
-The project is built with React, JSX, CSS, and JavaScript. It is also deployed on Heroku, so you can try it out by visiting the live demo.
-
-The App is still under development, but it is a good example of how React can be used to build a dynamic and interactive web application. Some additional features that could be added to the app in the future include the ability to filter books by genre, price, or other criteria; the ability to add books to a wishlist; the ability to rate and review books; the ability to subscribe to email notifications about new books; the ability to purchase books in different currencies; and the ability to translate the app into different languages.
+The project is built with various programming tools such as React, JSX, CSS, and JavaScript. It is also deployed on Netifly, so you can try it out by visiting the live demo.
 
 ## 🛠 Built With <a name="built-with"></a>
 * React
@@ -37,6 +36,8 @@ The App is still under development, but it is a good example of how React can be
 * CSS
 * Javascript ES6
 * Visual Studio Code
+* Jest
+* React Testing Library
 * ESLint
 * Stylelint
 
@@ -44,15 +45,11 @@ The App is still under development, but it is a good example of how React can be
 
 ### Key Features <a name="key-features"></a>
 
-> The key features of this project include the following.
+> The three key features of this project include the following.
 
-- **A navbar and footer that provide navigation throughout the app.**
-- **A register and login form for users to create and manage their accounts.**
-- **A shopping cart where users can add and remove books.**
-- **A search bar that allows users to find books by title, author, or genre.**
-- **A list of books that are currently in stock.**
-- **A page for each book where users can view more information, such as the book's description, reviews, and price.**
-- **An order history page where users can view their past orders.**
+- **Book SpaceX rockets and dragons, cancel the previously made booking.**
+- **Join SpaceX space missions, leave the mission the user he/she has joined earlier.**
+- **View all reserved rockets, space missions, and dragons.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -60,14 +57,14 @@ The App is still under development, but it is a good example of how React can be
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- Live Demo of the Project: https://brilliant-vacherin-c698ee.netlify.app/
+- Live Demo of the Project: https://peppy-unicorn-49207c.netlify.app/
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
-Get ready to explore the cosmos with these steps:
+Get ready to explore Space Travellers' Hub with these steps:
 
 ### Prerequisites <a name="prerequisites"></a>
 
@@ -98,6 +95,12 @@ To run tests run the following command in your terminal
  npm test
 ```
 
+Currently, there are no test scripts available, but the libraries (React Testing Library and Jest) are set up.
+
+You can also check linter errors by running this commands:
+> npx stylelint "**/*.{css,scss}"<br />
+> npx eslint "**/*.{js,jsx}"
+
 ### Usage <a name="usage"></a>
 
 Launch the app with the following command
@@ -118,22 +121,27 @@ Launch the app with the following command
 - Twitter: [@katarighe](https://twitter.com/katarighe)
 - LinkedIn: [@mighe](https://linkedin.com/in/mighe)
 
+👤 **Mohammad Amin Alizadeh**
+
+- GitHub: [@M-AminAlizadeh](https://github.com/M-AminAlizadeh)
+- LinkedIn: [@m-amin-alizadeh](https://www.linkedin.com/in/m-amin-alizadeh/)
+
+
+👤 **Margaret Kojo-Musa**
+
+- GitHub: [@MargaretTechworld](https://github.com/MargaretTechworld)
+- Twitter: [@KojoMargaret](https://twitter.com/KojoMargaret)
+- LinkedIn: [@margaret-kojo-musa](https://www.linkedin.com/in/margaret-kojo-musa-13a408147/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-> Here are some future features that could be added to the Space Travellers React app in the future.
+> Here are some future features that could be added to the Space Travellers' Hub app in the future.
 
-- **User authentication and authorization:** This would allow users to create accounts, sign in and out, and have their own personal bookshelves.
-- **Shopping cart:** This would allow users to add books to their cart and checkout.
-- **Payment processing:** This would allow users to pay for their purchases with a credit card or other payment method.
-- **Shipping and delivery:** This would allow users to track the status of their orders and have their books shipped to them.
-- **Reviews and ratings:** This would allow users to leave reviews and ratings of books they have read.
-- **Wishlist:** This would allow users to save books they are interested in buying for later.
-- **Personalization:** This would allow the app to be customized to each user's preferences, such as their favorite genres or authors.
-- **Social features:** This would allow users to connect with other users, share book recommendations, and discuss books.
+- **User authentication and authorization:** This would allow users to create accounts, sign in and out, and have their own personal items.
 
-These are just a few ideas for future features that could be added to the Space Travellers React app. The specific features that are added will depend on the needs and wants of the users.
+These are just a few ideas for future features that could be added to the Space Travellers' Hub app. The specific features that are added will depend on the needs and wants of the users.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
