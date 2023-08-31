@@ -24,12 +24,15 @@ const Rockets = () => {
           </div>
           <div className={styles.details}>
             <div className={styles.headline_h2}>{rocket.rocket_name}</div>
-            {rocket.reserved ? (
-              <span className={styles.reserved}>Reserved</span>
-            ) : (
-              ''
-            )}
-            <p>{rocket.description}</p>
+            <p className>
+              {' '}
+              {rocket.reserved ? (
+                <span className={styles.reserved}>Reserved</span>
+              ) : (
+                ''
+              )}
+              {rocket.description}
+            </p>
             {rocket.reserved && (
               <button
                 type="button"
