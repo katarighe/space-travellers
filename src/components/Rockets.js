@@ -1,16 +1,10 @@
-import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchRockets, cancelReservation, reserveRocket } from '../redux/rockets/rocketsSlice';
+import { cancelReservation, reserveRocket } from '../redux/rockets/rocketsSlice';
 import styles from './Rockets.module.css';
 
 const Rockets = () => {
   const { rockets, status, error } = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
-
-  useEffect(() => {
-    dispatch(fetchRockets());
-  }, [dispatch]);
-
   if (status) {
     return <div className="loading">Loading, please wait...</div>;
   }

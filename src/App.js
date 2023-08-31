@@ -6,12 +6,16 @@ import Rockets from './components/Rockets';
 import Missions from './components/Missions';
 import Dragons from './components/Dragons';
 import Profile from './components/Profile';
+import { fetchMissions } from './redux/missions/missionsSlice';
 import { getDragons } from './redux/dragons/dragonsSlice';
+import { fetchRockets } from './redux/rockets/rocketsSlice';
 
 function App() {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    dispatch(fetchRockets());
+    dispatch(fetchMissions());
     dispatch(getDragons());
   }, [dispatch]);
 
