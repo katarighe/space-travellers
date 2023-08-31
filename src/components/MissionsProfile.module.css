@@ -1,0 +1,37 @@
+.profileContainer {
+  font-family: monospace;
+}
+
+.header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.missionItems {
+  list-style-type: none;
+}
+
+.missionItem {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.my_missions ul {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.my_missions ul li {
+  padding: 0.5rem 1rem 1.6rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.my_missions ul li:last-child {
+  border-bottom: none;
+}
