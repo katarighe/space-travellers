@@ -1,26 +1,22 @@
-.profile_page {
-  padding: 2rem 5%;
-  display: flex;
-  gap: 5%;
-  flex: 2;
-}
-
 .profileContainer {
   font-family: monospace;
 }
 
-.my_missions {
-  flex: 2;
-}
-
-.my_missions * {
-  font-family: 'Roboto', sans-serif;
-}
-
-.my_missions h2 {
-  font-size: 1.5rem;
+.header {
+  font-size: 2rem;
   margin-bottom: 1rem;
-  letter-spacing: 0.4px;
+}
+
+.missionItems {
+  list-style-type: none;
+}
+
+.missionItem {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  font-weight: 400;
 }
 
 .my_missions ul {
