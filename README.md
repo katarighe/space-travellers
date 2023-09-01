@@ -101,8 +101,11 @@ Currently, there are no test scripts available, but the libraries (React Testing
 You can also check linter errors by running this commands:
 
 ```
-> npx stylelint "**/*.{css,scss}"<br />
-> npx eslint "**/*.{js,jsx}"
+npx stylelint "**/*.{css,scss}"
+```
+
+```
+npx eslint "**/*.{js,jsx}"
 ```
 
 ### Usage <a name="usage"></a>
