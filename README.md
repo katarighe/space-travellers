@@ -1,6 +1,7 @@
 <a name="readme-top"></a>
 <!-- TABLE OF CONTENTS -->
-Space Travelers' Hub is a single-page application that allows users to reserve rockets and dragons for missions. The missions are fetched from external APIs, and the selected services are displayed on the user's profile page.
+
+# Space Travelers' Hub
 
 # 📗 Table of Contents
 
