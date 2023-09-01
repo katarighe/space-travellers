@@ -99,8 +99,11 @@ To run tests run the following command in your terminal
 Currently, there are no test scripts available, but the libraries (React Testing Library and Jest) are set up.
 
 You can also check linter errors by running this commands:
+
+```
 > npx stylelint "**/*.{css,scss}"<br />
 > npx eslint "**/*.{js,jsx}"
+```
 
 ### Usage <a name="usage"></a>
 
